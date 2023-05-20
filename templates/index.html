@@ -1,0 +1,21 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Priecīgas tūres no Rīgas</h1>
+    <p class="lead">Rīgas tūrisma kompānijas mājaslapa</p>
+    <p><a href="/about" class="btn btn-primary btn-large">Vairak &raquo;</a></p>
+</div>
+
+<div class="row">
+    {% for row in result %}
+    <div class="col-md-4">
+        <h2>{{row[2]}}</h2>
+        <p>{{row[4]}}</p>
+        <p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Pierakstities &raquo;</a></p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
